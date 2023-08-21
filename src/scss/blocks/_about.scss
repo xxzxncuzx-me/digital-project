@@ -1,0 +1,98 @@
+.about {
+    display: flex;
+    background-color: $bg-color;
+    @media (max-width: $screen-xs-max) {
+        flex-direction: column;
+        padding: 15px 25px;
+        margin: 0 auto;
+        gap: 25px;
+    }
+    @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+        padding: 30px 30px;
+    } 
+    @media (min-width: $screen-md-min) {
+        padding: 30px 90px;
+        gap: 30px;
+    } 
+    &__img {
+        display: flex;
+        flex-direction: row;
+        gap: 30px;
+
+        &--block {
+            @media (min-width: $screen-sm-min) {
+                position: relative;
+            } 
+        }
+        &--1 {
+            width: 270px;
+            height: 265px;
+            background-image: url(../../img/about_img1.jpg);
+            background-position: center center;
+            background-size: cover;
+            margin-bottom: 30px;
+            @media (max-width: $screen-xs-max) {
+                display: none;
+            }
+        } 
+        &--2 {
+            background-image: url(../../img/about_img3.jpg);
+            background-position: center center;
+            background-size: cover;
+            @media (max-width: $screen-xs-max) {
+                width: 75vw;
+                height: 45vw;
+            }
+
+            @media (min-width: $screen-sm-min) {
+                width: 270px;
+                height: 140px;
+            } 
+            @media (min-width: $screen-lg-min) {
+                position: absolute;
+            }
+        }
+
+        &--3 {
+            @media (min-width: $screen-lg-min) {
+                width: 270px;
+                height: 345px;
+                background-image: url(../../img/about_img2.jpg);
+                background-position: center center;
+                background-size: cover;
+            } 
+        }
+    }
+
+    &__article {
+        @media (max-width: $screen-xs-max) {
+            width: 75vw;
+        }
+        @media (min-width: $screen-sm-min) {
+            width: 400px;
+        } 
+        p {
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: 25px;
+            margin: 20px 0;
+        }
+        .btn {
+            background-color: $white-color;
+            color: $nav--color;
+            svg {
+                color: $nav--color;
+            }
+            &:hover {
+            color: $gray-color;
+                svg {
+                    color: $gray-color;
+                }
+            }
+            @media (max-width: $screen-sm-max) {
+                margin: 0 auto;
+            }
+        }
+    }
+}

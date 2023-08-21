@@ -1,0 +1,114 @@
+.homepage {
+    display: flex;
+    justify-content: space-between; 
+    border-collapse: collapse;
+    @media (max-width: $screen-xs-max) {
+        flex-direction: column-reverse;
+        gap: 20px
+    }
+    @media (min-width: $screen-sm-min) {
+        gap: 122px;
+        flex-direction: row;
+        align-items: flex-end;
+    }
+
+    .left__block {
+        @media (max-width: $screen-xs-max) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 35px;
+        }
+        @media (min-width: $screen-sm-min) {
+                margin-bottom: 50px;
+            }
+        
+        .title {
+            text-transform: uppercase;
+            font-size: 25px;
+            @media (max-width: $screen-xs-max) {
+                text-align: center;
+            }
+            h1 {
+                margin: 0;
+                &:first-child {
+                    color: $gray-color;
+                    font-style: normal;
+                    font-weight: 300;
+                }
+                &:last-child {
+                    font-style: normal;
+                    font-weight: 700;
+                }
+            }
+        }
+        .arrow {
+            justify-content: left;
+            @media (max-width: $screen-xs-max) {
+                margin: 10px 0;
+                padding: 0 0 0 25px;
+            }
+            @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) { 
+                margin: 70px 0;
+                gap: 23px;
+            }
+            @media (min-width: $screen-md-min) { 
+                margin: 90px 0;
+                gap: 23px;
+            }
+            &__left {
+                margin-right: 10px;
+            }
+            &__left, &__right{
+                display: inline-block;
+                padding: 15px;
+                border: 1px solid $number-color;
+                background-color: $white-color;
+                border-radius: 2px;
+            }
+            .active {
+                background-color: #F9F9F9;
+            }
+        }
+        .numbers {
+            color: $gray-color;
+            display: flex;
+            flex-direction: row;
+            gap: 25px;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 24px;
+        }
+    }
+
+    .right__block {
+        width: 770px;
+        height: 800px;
+        background-image: url(../../img/homepage.svg);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        align-items: flex-end;
+        @media (max-width: $screen-xs-max) {
+            width: 100vw;
+            height: 70vh;
+        }
+        .btn {
+            background-color: $white-color;
+            bottom: auto;
+            color: $nav--color;
+            letter-spacing: 0;
+                svg {
+                    color: $nav--color;
+            }
+            &:hover {
+                color: $gray-color;
+                    svg {
+                        color: $gray-color;
+                    }
+            }
+        }
+    }
+}
