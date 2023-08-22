@@ -27,7 +27,7 @@
         &--1 {
             width: 270px;
             height: 265px;
-            background-image: url(../../img/about_img1.jpg);
+            background-image: url(../img/about_img1.jpg);
             background-position: center center;
             background-size: cover;
             margin-bottom: 30px;
@@ -36,7 +36,7 @@
             }
         } 
         &--2 {
-            background-image: url(../../img/about_img3.jpg);
+            background-image: url(../img/about_img3.jpg);
             background-position: center center;
             background-size: cover;
             @media (max-width: $screen-xs-max) {
@@ -57,7 +57,7 @@
             @media (min-width: $screen-lg-min) {
                 width: 270px;
                 height: 345px;
-                background-image: url(../../img/about_img2.jpg);
+                background-image: url(../img/about_img2.jpg);
                 background-position: center center;
                 background-size: cover;
             } 
